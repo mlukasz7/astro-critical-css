@@ -1,5 +1,5 @@
 {
-  "name": "astro-critical-css",
+  "name": "ap-astro-critical-css",
   "description": "Critical css integration for astro to inline above-the-fold css into HTML",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "author": "LM",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "main": "./lib/dist/index.js",
   "types": "./lib/dist/index.d.ts",
