@@ -12,7 +12,7 @@
   },
   "author": "Rumaan K <hey@rumaan.dev>",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "main": "./lib/dist/index.js",
   "types": "./lib/dist/index.d.ts",

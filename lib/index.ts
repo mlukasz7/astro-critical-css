@@ -11,7 +11,7 @@ export default (): AstroIntegration => {
     hooks: {
       "astro:build:done": async ({ dir }) => {
         const distPath = fileURLToPath(dir);
-        const htmlPathsStream = fg.stream("**/*.html", { cwd: distPath });
+        const htmlPathsStream = fg.stream("*.html|*/*.html", { cwd: distPath });
         for await (const htmlPath of htmlPathsStream) {
           const path = join(distPath, htmlPath.toString());
           console.log("🧷 Inlining =>", path);
