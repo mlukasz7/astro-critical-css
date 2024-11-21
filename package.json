@@ -3,14 +3,14 @@
   "description": "Critical css integration for astro to inline above-the-fold css into HTML",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rumaan/astro-critical-css.git"
+    "url": "https://github.com/mlukasz7/astro-critical-css.git"
   },
-  "homepage": "https://github.com/rumaan/astro-critical-css#readme",
+  "homepage": "https://github.com/mlukasz7/astro-critical-css#readme",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rumaan/astro-critical-css/issues"
+    "url": "https://github.com/mlukasz7/astro-critical-css/issues"
   },
-  "author": "Rumaan K <hey@rumaan.dev>",
+  "author": "LM",
   "type": "module",
   "version": "0.0.5",
   "private": false,
