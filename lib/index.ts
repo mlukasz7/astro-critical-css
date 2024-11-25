@@ -5,13 +5,13 @@ import { generate } from "critical";
 import fg from "fast-glob";
 import { writeFile } from "node:fs/promises";
 
-export default (): AstroIntegration => {
+export default (streamSource = "*.html|*/*.html"): AstroIntegration => {
   return {
     name: "critical-css",
     hooks: {
       "astro:build:done": async ({ dir }) => {
         const distPath = fileURLToPath(dir);
-        const htmlPathsStream = fg.stream("*.html|*/*.html", { cwd: distPath });
+        const htmlPathsStream = fg.stream(streamSource, { cwd: distPath });
         for await (const htmlPath of htmlPathsStream) {
           const path = join(distPath, htmlPath.toString());
           console.log("🧷 Inlining =>", path);
