@@ -5,7 +5,10 @@ import { generate } from "critical";
 import fg from "fast-glob";
 import { writeFile } from "node:fs/promises";
 
-export default (streamSource = "*.html|*/*.html"): AstroIntegration => {
+export default ({
+  streamSource = "*.html|*/*.html",
+  ...options
+}): AstroIntegration => {
   return {
     name: "critical-css",
     hooks: {
@@ -20,6 +23,7 @@ export default (streamSource = "*.html|*/*.html"): AstroIntegration => {
             inline: true,
             src: path,
             base: distPath,
+            ...options,
           });
           await writeFile(path, Buffer.from(html, "utf-8"));
         }
